@@ -13,5 +13,6 @@ else()
     message(STATUS "Found Geode SDK: $ENV{GEODE_SDK}")
 endif()
 
-include($ENV{GEODE_SDK}/CMakeLists.txt)
+add_subdirectory($ENV{GEODE_SDK} ${CMAKE_CURRENT_BINARY_DIR}/geode)
 setup_geode_mod(${PROJECT_NAME})
+
