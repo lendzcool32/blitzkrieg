@@ -35,3 +35,4 @@ class $modify(BCPauseLayer, PauseLayer) {
         ChallengePopup::create(m_fields->m_levelID)->show();
     }
 };
+
