@@ -1,0 +1,53 @@
+{
+    "geode": "3.9.1",
+    "gd": {
+        "win": "2.2074",
+        "android": "2.2074",
+        "mac": "2.2074",
+        "ios": "2.2074"
+    },
+    "version": "v1.0.0",
+    "id": "yourname.blitzconsistency",
+    "name": "Blitzkrieg Consistency",
+    "developer": "yourname",
+    "description": "Adds forced-consistency and noclip-run challenges on top of Blitzkrieg.",
+    "repository": "",
+    "dependencies": [
+        {
+            "id": "zhulis.blitzkrieg",
+            "version": ">=1.0.0",
+            "importance": "required"
+        },
+        {
+            "id": "cvolton.level-id-api",
+            "version": "=2.0.0",
+            "importance": "required"
+        },
+        {
+            "id": "absolllute.megahack",
+            "version": ">=8.0.0",
+            "importance": "suggested"
+        }
+    ],
+    "resources": {
+        "spritesheets": {}
+    },
+    "settings": {
+        "default-noclip-attempts": {
+            "name": "Default noclip-run count",
+            "description": "How many clean under-death-cap runs are needed by default for a new noclip challenge.",
+            "type": "int",
+            "default": 2,
+            "min": 1,
+            "max": 10
+        },
+        "default-consistency-runs": {
+            "name": "Default consistency-run count",
+            "description": "How many clean (non-noclip) completions are needed by default for a new consistency challenge.",
+            "type": "int",
+            "default": 3,
+            "min": 1,
+            "max": 20
+        }
+    }
+}
