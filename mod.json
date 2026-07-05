@@ -13,23 +13,20 @@
     "developer": "yourname",
     "description": "Adds forced-consistency and noclip-run challenges on top of Blitzkrieg.",
     "repository": "",
-    "dependencies": [
-        {
-            "id": "zhulis.blitzkrieg",
+        "dependencies": {
+        "zhulis.blitzkrieg": {
             "version": ">=1.0.0",
             "importance": "required"
         },
-        {
-            "id": "cvolton.level-id-api",
+        "cvolton.level-id-api": {
             "version": "=2.0.0",
             "importance": "required"
         },
-        {
-            "id": "absolllute.megahack",
+        "absolllute.megahack": {
             "version": ">=8.0.0",
             "importance": "suggested"
         }
-    ],
+    },
     "resources": {
         "spritesheets": {}
     },
