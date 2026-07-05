@@ -29,9 +29,6 @@ class $modify(BCPlayLayer, PlayLayer) {
     }
 
     void destroyPlayer(PlayerObject* player, GameObject* object) {
-        // Track death BEFORE calling original, since noclip mods often
-        // no-op the original call (which is exactly what tells us noclip
-        // was active for this hazard).
         auto lvlID = m_level->m_levelID.value();
         float percent = this->getCurrentPercent();
         bool noclipNow = NoclipBridge::isNoclipActive();
@@ -49,7 +46,6 @@ class $modify(BCPlayLayer, PlayLayer) {
     void postUpdate(float dt) {
         PlayLayer::postUpdate(dt);
 
-        // If noclip flips on mid-attempt, remember it for the whole attempt
         if (NoclipBridge::isNoclipActive()) {
             m_fields->m_usedNoclipThisAttempt = true;
         }
