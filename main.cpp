@@ -9,6 +9,5 @@ $on_mod(Loaded) {
     } else {
         log::info("[BlitzConsistency] Mega Hack not installed - noclip-mode challenges will always read as noclip-off.");
     }
-    // PlayLayerHook.cpp and PauseLayerHook.cpp register their own $modify
-    // hooks automatically at load time - nothing else needed here.
 }
+
