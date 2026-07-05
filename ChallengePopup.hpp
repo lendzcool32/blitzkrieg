@@ -20,9 +20,6 @@ protected:
         m_levelID = levelID;
         this->setTitle("Consistency / Noclip Challenges");
 
-        auto winSize = CCDirector::get()->getWinSize();
-
-        // --- creation form ---
         float y = m_mainLayer->getContentHeight() - 60.f;
 
         auto startLabel = CCLabelBMFont::create("Start %", "bigFont.fnt");
@@ -69,7 +66,6 @@ protected:
         m_deathCapInput->setFilter("0123456789");
         m_mainLayer->addChild(m_deathCapInput);
 
-        // type toggle buttons
         auto consistencyBtn = CCMenuItemSpriteExtra::create(
             ButtonSprite::create("Consistency (no noclip)", "goldFont.fnt", "GJ_button_01.png", 0.6f),
             this, menu_selector(ChallengePopup::onSelectConsistency)
